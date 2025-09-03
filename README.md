@@ -1,1 +1,1 @@
-# Trabajoclase2Geraldine-Polo-Vigo
+# TrabajoGeraldine-Polo-Vigo
