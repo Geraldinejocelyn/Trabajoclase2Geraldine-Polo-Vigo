@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .centro {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        height: 500px;
+        width: 500px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body style="background-color: rgb(216, 195, 236);"></body> -->
+<body style="background-color: rgb(216, 195, 236);">
+    <div class="centro">
+        <input id="numero1" type="number">
+        <button id="boton" style="background-color: rgb(185, 138, 228);">Tocar aqui</button>
+        <p id="parrafo" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></p>
+        <input id="texto1" type="text">
+        <button id="boton2" style="background-color: rgb(240, 112, 180);">Tocar aqui</button>
+        <p id="parrafo2" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></p>
+    </div>
+    
+    <script>
+       document.getElementById('boton').addEventListener('click', Numero)
+       function Numero(){
+       const val = document.getElementById('numero1').value
+       document.getElementById('parrafo').innerHTML = val
+       }
+       document.getElementById('boton2').addEventListener('click', Texto)
+       function Texto(){
+       const val = document.getElementById('texto1').value
+       document.getElementById('parrafo2').innerHTML = val
+       }
+    </script>
+
+</body>
+</html>
