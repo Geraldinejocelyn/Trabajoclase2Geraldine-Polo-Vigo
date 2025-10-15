@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+         margin: 0;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #e991e3;
+         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+     #cuadrado {
+            width: 300px;
+            height: 300px;
+            background-color: #d5008e;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(187, 0, 255);
+            font-size: 22px;
+            font-weight: bold;
+        } 
+
+      #cuadrado:hover {
+      transform: scale(1.05);
+
+    }
+    </style>
+</head>
+<body>
+    <div id="cuadrado"> Hola, presiona :D </div>
+
+    <script>
+        const cuadrado = document.getElementById ("cuadrado");
+        let mouseEncima = false
+
+       cuadrado.addEventListener("mouseenter", () => {
+            mouseEncima = true
+        }) ;
+       
+        cuadrado.addEventListener("mouseleave", () => {
+            mouseEncima = false
+        }) ;
+
+        function colorAleatorio() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        cuadrado.addEventListener ("click", () => {
+        if (mouseEncima) {
+        cuadrado.style.backgroundColor = colorAleatorio () ;
+        }
+        });
+    </script>
+</body>
+</html>
